@@ -1,0 +1,59 @@
+<div class="show-header">
+  <%= image_tag("dumbbell.png", class: 'icon-header') %>
+  <h3 class="database-headline">Fitness</h3>
+  <h5 class="data-headline" id="fitness">DATA</h5>
+</div>
+
+<div class="database-body">
+
+  <div class="database-top">
+
+    <span class="view-container">
+      <%= link_to 'ALL ENTRIES', user_fitness_entries_path, class: "special-button" %>
+    </span> 
+
+    <span class="search-container">
+      <%= form_tag user_fitness_entries_path, :method => 'get' do %>
+        <%= text_field_tag :search, params[:search], :placeholder => "SEARCH",class: "search-field" %>
+        <% submit_tag "SEARCH" %>
+      <% end %>
+    </span>
+
+    <span class="special-button">
+    <%= link_to '+ NEW ENTRY', new_user_fitness_entry_path(@user.id) %>
+    </span>
+
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>&nbsp; DATE</th>
+        <th>&nbsp; DURATION</th>
+        <th>&nbsp; NOTES</th>
+        <th>VIEW</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @fitness_entries.each do |entry| %>
+      <tr>
+        <td><%= entry.date.strftime("%b %-d, %Y") %></td>
+        <td><%= entry.duration %> min</td>
+        <td><%= entry.notes %></td>
+        <td class="ved"><%= link_to image_tag("eye.png"), user_fitness_entry_path(@user.id, entry.id), :class => "entry-icons" %></td> 
+        <td class="ved"><%= link_to image_tag("pencil.png"), edit_user_fitness_entry_path(@user.id, entry.id), :class => "entry-icons" %></td> 
+        <td class="ved"><%= link_to image_tag("trashcan.png"), user_fitness_entry_path(@user.id, entry.id), :class => "entry-icons delete-link" %></td>
+      </tr>
+      <% end %> 
+    </tbody>
+  </table>
+
+  <div class="link">
+    <%= link_to '&lt; &nbsp; Dashboard'.html_safe, '/dashboard' %>
+  </div>
+
+</div>
+
+<%= render :partial => 'shared/delete_modal' %>

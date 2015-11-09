@@ -1,0 +1,40 @@
+<div class="show-header">
+  <%= image_tag("money.png", class: 'icon-header') %>
+  <h3 class="database-headline">Finance</h3>
+  <h5 class="data-headline" id="finance">VIEW ENTRY</h5>
+</div>
+
+<div class="form-container">
+  <div class="field-container">
+    <div class="label">Date</div>
+    <div class="field"><%= @finance_entry.date.strftime("%b %-d, %Y") %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label">Category</div>
+    <div class="field"><%= @finance_entry.category %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label">Cost</div>
+    <div class="field">$<%= @finance_entry.expense %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label">Notes</div>
+    <div class="field"><%= @finance_entry.notes %></div>
+  </div>
+  
+  <div class="special-button-container">
+    <span class="special-button"><%= link_to 'EDIT', edit_user_finance_entry_path %></span>
+    <span class="special-button"><%= link_to 'DELETE', user_finance_entry_path, :class => "delete-link" %></span>
+    <span class="special-button"><%= link_to 'NEW', new_user_finance_entry_path %></span>
+  </div>
+
+</div>
+<div class="link-container">
+  <div class="link"><%= link_to '&lt; &nbsp; Data'.html_safe, user_finance_entries_path %></div>
+  <div class="link"><%= link_to '&lt; &lt; &nbsp; Dashboard'.html_safe, dashboard_path %></div>
+</div>
+
+<%= render :partial => 'shared/delete_modal' %>

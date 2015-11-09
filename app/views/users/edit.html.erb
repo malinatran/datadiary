@@ -1,0 +1,13 @@
+<div id="homepage">
+
+<div class="login">Edit Account</div>
+<p class="external-text">User since <%= @user.created_at.strftime("%B %-d, %Y") %><br>Last updated on <%= @user.updated_at.strftime("%b %-d, %Y") %></p>
+
+<%= render :partial => 'form' %>
+
+<div class="link-container">
+  <div class="link"><%= link_to 'Delete Account?', logout_path, method: 'delete', data: { confirm: 'Are you sure?' } %></div>
+  <div class="link"><%= link_to '&lt; &nbsp; Dashboard'.html_safe, dashboard_path %></div>
+</div>
+
+</div>

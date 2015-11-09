@@ -1,0 +1,598 @@
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+.homepage {
+  background-image: url("background.png");
+  border-top: 20px solid #906090;
+  text-align: center;
+}
+
+#wrapper {
+  min-height: 100%;
+  position:relative;
+}
+
+#content {
+  padding-bottom: 20px;
+}
+
+#footer {
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#footer-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  margin: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+#footer-text a {
+  color: black;
+  text-decoration: none;
+}
+
+#footer-text a:hover {
+  color: #33CCCC;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  text-align: left;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+h5 {
+  color: #906090;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h6 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0;
+  text-align: left;
+}
+
+/*Root route*/
+
+#name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin: 40px auto 10px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#homepage-container {
+  text-align: center;
+}
+
+/*Login page*/
+
+.login {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  padding: 50px 0 20px;
+  text-align: center;
+}
+
+.form-container {
+  background-color: rgba(255,255,255,0.7);
+  border: 3px solid black;
+  padding: 20px 10px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+.field-container {
+  padding: 5px 5px 10px 5px;
+}
+
+.label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.field {
+  color: #33CCCC;
+  font-family: 'Montserrat', sans-serif;
+  padding: 3px;
+}
+
+input[type=text], input[type=password] {
+  color: #33CCCC;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: rgba(255,255,255,0.75);
+  border: 0;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
+
+textarea {
+  color: #33CCCC;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: rgba(255,255,255,0.75);
+  border: 0;
+  border-bottom: 1px solid black;
+  height: 55px;
+  padding: 5px;
+  width: 175px;
+}
+
+.emotion {
+  height: auto;
+}
+
+input[type=submit] { 
+  background-color: transparent;
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  margin: auto;
+}
+
+.submit-button {
+  display: inline-block;
+  color: #e0234d;
+  padding: 10px 0;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #33CCCC;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.submit-button:hover:before, .submit-button:focus:before, .submit-button:active:before {
+  right: 0;
+}
+
+.submit-button:active {
+  background-color: white;
+}
+
+.external-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 10px auto;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.external-text a {
+  color: #33CCCC;
+  text-decoration: none;
+}
+
+#bottom-text a {
+  color: black;
+  text-decoration: underline;
+}
+
+.link-container {
+  margin: 5px auto;
+  text-align: center;
+}
+
+.link {
+  background-color: #33CCCC;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+  width: 120px;
+}
+
+.link a {
+  color: white;
+  text-decoration: none;
+}
+
+.heading {
+  background-color: white;
+  border: 3px solid #33CCCC;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 10px;
+  width: 160px;
+}
+
+.database-container {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.database-subcontainer {
+  display: inline-block;
+  margin: 15px;
+}
+
+.database {
+  margin: auto;
+  padding: 5px;
+}
+
+.database a {
+  color: black;
+  text-decoration: none;
+}
+
+.subheading {
+  font-family: Roboto Slab, serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: auto;
+  height: 65px;
+}
+
+.show-header {
+  display: inline-block;
+  margin: 20px auto;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.database-headline {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.data-headline, #fitness {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0;
+  text-align: left;
+}
+
+.icon-header {
+  display: inline-block;
+  float: left;
+  height: 75px;
+  margin-right: 20px;
+  width: auto;
+}
+
+.database-body {
+  text-align: center;
+}
+
+.database-top {
+  margin: auto;
+  width: 60%;
+  vertical-align: top;
+}
+
+.search-container {
+  display: inline-block;
+  float: left;
+  margin: 0 20px;
+  width: 50%;
+}
+
+.search-field {
+  font-size: 10px;
+  width: 100px;
+}
+
+.search-field form {
+  margin: 0;
+  width: 100px; 
+}
+
+.view-container {
+  float: left;
+  margin: 0 20px;
+  padding-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 30px auto;
+  width: 80%;
+}
+
+th {
+  background-color: white;
+  border-bottom: 2px solid #906090;
+  border-top: 2px solid #906090;
+  color: #906090;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  height: 30px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+td {
+  border-bottom: 1px solid black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  padding: 10px 5px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.ved a {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.ved a:hover {
+  color: #33CCCC;
+}
+
+.left-column {
+  text-align: left;
+  width: 100px;
+}
+
+#special-button-container {
+  margin: 10px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.special-button {
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+
+.special-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #33CCCC;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.special-button:hover:before, .special-button:focus:before, .special-button:active:before {
+  right: 0;
+}
+
+.special-button a {
+  color: black;
+  text-decoration: none;
+}
+
+.textarea {
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+#date-column {
+  width: 80px;
+}
+
+#duration-column {
+  width: 80px;
+}
+
+.dropdown-menu {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 2em;
+  list-style: none;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 10px 0;
+  box-shadow: rgb(204, 204, 204) 0px 2px 2px;
+  border-radius: 2px;
+  display: block;
+  background: white;
+}
+
+.dropdown-menu .textcomplete-item {
+  padding: 3px 10px;
+}
+
+.dropdown-menu .textcomplete-item a img {
+  padding-right: 10px;
+}
+
+.dropdown-menu .active {
+  background-color: #ffff99;
+}
+
+#navbar {
+  background-color: rgba(51,204,204,0.7);
+  box-shadow: 0 10px 6px -6px #D3D3D3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  text-align: left;
+  width: 120px;
+}
+
+#navbar ul {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+#navbar ul li {
+  display: inline-block;
+  list-style: none;
+  padding-bottom: 0.3em;
+  padding-left: 0.6em;
+}
+
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 3px;
+}
+
+#navbar ul li a:hover {
+  color: black;
+}
+
+#data-diary {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  padding-left: 2px;
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+.entry-icons img {
+  width: 20px;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  margin: 0 30%;
+  background-color: white;
+  top: 150px;
+  width: 40%;
+}
+
+.modal-mask {
+  background-color: rgba(255,255,255,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.delete-modal {
+  background-color: white;
+  border: 5px solid #906090;
+  margin: auto;
+  padding-top: 20px;
+  width: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.delete-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.delete-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.delete-text a {
+  color: #33CCCC;
+  text-decoration: none;
+}
+
+.delete-text a:hover {
+  color: black;
+}

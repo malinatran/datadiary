@@ -1,0 +1,10 @@
+<h3>Your Profile</h3>
+
+Welcome, <%= @user.username %>!
+
+<!-- AVATAR -->
+<br>
+User since <%= @user.created_at.strftime("%B %d, %Y") %><br><br>
+
+<%= link_to 'Dashboard', dashboard_path %><br>
+<%= link_to 'Logout', logout_path, method: 'delete' %><br>

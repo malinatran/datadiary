@@ -1,0 +1,27 @@
+<div id="homepage">
+
+<div class="login">Login</div>
+
+<div class="form-container">
+<%= form_for(:user, url: login_path) do |f| %>
+  
+  <div class="field-container">
+    <div class="label"><%= f.label :username %></div>
+    <div class="field"><%= f.text_field :username %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label">
+    <%= f.label :password %></div>
+    <div class="field"><%= f.password_field :password %></div>
+  </div>
+
+  <div class="submit-button"><%= f.submit "SUBMIT" %></div>
+
+<% end %>
+</div>
+<br>
+<p class="external-text">Don't have an account?</p> 
+<div class="link"><%= link_to 'Sign up!', register_path %></link>
+
+</div>

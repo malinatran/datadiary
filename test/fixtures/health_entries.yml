@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2015-11-04
+  emotion: MyString
+  notes: MyText
+  user_id: 
+
+two:
+  date: 2015-11-04
+  emotion: MyString
+  notes: MyText
+  user_id: 

@@ -1,0 +1,37 @@
+<div class="show-header">
+  <%= image_tag("heartbeat.png", class: 'icon-header') %>
+  <h3 class="database-headline">Health</h3>
+  <h5 class="data-headline" id="fitness">VIEW ENTRY</h5>
+</div>
+<br>
+
+<div class="form-container">
+  <div class="field-container">
+    <div class="label">Date</div>
+    <div class="field"><%= @health_entry.date.strftime("%b %-d, %Y") %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label">Emotion</div>
+    <div class="field"><%= @health_entry.emotion %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label">Notes</div>
+    <div class="field"><%= @health_entry.notes %></div>
+  </div>
+  
+  <div class="special-button-container">
+    <span class="special-button"><%= link_to 'EDIT', edit_user_health_entry_path %></span>
+    <span class="special-button"><%= link_to 'DELETE', user_health_entry_path, class: "delete-link" %></span>
+    <span class="special-button"><%= link_to 'NEW', new_user_health_entry_path %></span>
+  </div>
+
+</div>
+
+<div class="link-container">
+  <div class="link"><%= link_to '&lt; &nbsp; Data'.html_safe, user_health_entries_path %></div>
+  <div class="link"><%= link_to '&lt; &lt; &nbsp; Dashboard'.html_safe, dashboard_path %></div>
+</div>
+
+<%= render :partial => 'shared/delete_modal' %>

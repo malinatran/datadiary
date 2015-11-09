@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dataDiary</title>
+  <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div id="wrapper">
+
+    <div id="content">
+      <body class="<%= @home_page ? 'homepage' : '' %>">
+      <%= yield %>
+      <% if session[:user_id] %>
+        <div id="navbar">
+          <ul>
+            <li id="data-diary"><strong>dataDiary</strong></li>
+            <li><%= link_to 'Dashboard', dashboard_path %></li>
+            <li><%= link_to 'Edit Account', settings_path %></li>
+            <li><%= link_to 'Logout', logout_path, method: 'delete' %></li>
+          </ul>
+        </div>
+      <% end %>
+      </body>
+    </div>
+    
+    <div id="footer">
+      <p id="footer-text">&copy; 2015 dataDiary :v: Made by <a href="http://www.twitter.com/MalinaTran">@MalinaTran</a></p>
+    </div>
+
+  </div>
+</body>
+</html>

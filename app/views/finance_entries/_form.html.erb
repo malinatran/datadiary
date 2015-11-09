@@ -1,0 +1,39 @@
+<div class="form-container">
+
+<%= form_for(@finance_entry, url: @form_path) do |f| %>
+
+  <div class="field-container">
+    <div class="label">
+      <%= f.label :date %>
+    </div>
+    <div class="field">
+      <%= f.text_field :date, :class => "datepicker", required:true %>
+    </div>
+  </div>
+
+  <div class="field-container">
+    <div class="label"><%= f.label :category %></div>
+    <div class="field">
+      <%= f.select(:category, options_for_select(['Apparel, Shoes & Accessories','Dining & Drinking','Entertainment','Groceries','Household Products','Medical & Health','Transportation', 'Personal Care', 'Professional Services','Other'], @finance_entry.category), include_blank: true ) %>
+    </div>
+  </div>
+
+  <div class="field-container">
+    <div class="label"><%= f.label :cost %></div>
+    <div class="field"><%= f.text_field :expense %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label"><%= f.label :notes %></div>
+    <div class="field"><%= f.text_area :notes %></div>
+  </div>
+
+  <div class="submit-button"><%= f.submit 'SUBMIT' %></div>
+
+<% end %>
+</div>
+
+<div class="link-container">
+  <div class="link"><%= link_to '&lt; &nbsp; Data'.html_safe, user_finance_entries_path %></div>
+  <div class="link"><%= link_to '&lt; &lt; &nbsp; Dashboard'.html_safe, '/dashboard' %></div>
+</div>

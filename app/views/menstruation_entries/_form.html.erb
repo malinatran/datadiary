@@ -1,0 +1,28 @@
+<div class="form-container">
+
+<%= form_for(@menstruation_entry, url: @form_path) do |f| %>
+
+  <div class="field-container">
+    <div class="label"><%= f.label :start_date %></div>
+    <div class="field"><%= f.text_field :start_date, :class => "datepicker", :value => @menstruation_entry.start_date, required:true %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label"><%= f.label :end_date %></div>
+    <div class="field"><%= f.text_field :end_date, :class => "datepicker", :value => @menstruation_entry.end_date, required:true  %></div>
+  </div>
+
+  <div class="field-container">
+    <div class="label"><%= f.label :notes %></div>
+    <div class="field"><%= f.text_area :notes %></div>
+  </div>
+
+  <div class="submit-button"><%= f.submit 'SUBMIT' %></div>
+
+<% end %>
+</div>
+
+<div class="link-container">
+  <div class="link"><%= link_to '&lt; &nbsp; Data'.html_safe, user_menstruation_entries_path %></div>
+  <div class="link"><%= link_to '&lt; &lt; &nbsp; Dashboard'.html_safe, '/dashboard' %></div>
+</div>
