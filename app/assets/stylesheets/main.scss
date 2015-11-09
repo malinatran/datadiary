@@ -5,7 +5,7 @@ html, body {
 }
 
 .homepage {
-  background-image: url("background.png");
+  background-image: url(asset-path("background.png"));
   border-top: 20px solid #906090;
   text-align: center;
 }
