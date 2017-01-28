@@ -157,7 +157,7 @@ textarea {
   height: auto;
 }
 
-input[type=submit] { 
+input[type=submit] {
   background-color: transparent;
   border: 0;
   font-family: 'Montserrat', sans-serif;
@@ -273,13 +273,18 @@ input[type=submit] {
   margin: 15px;
 }
 
+.database-container a {
+  text-decoration: none;
+}
+
 .database {
   margin: auto;
   padding: 5px;
 }
 
-.database a {
+.superheading {
   color: black;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -350,7 +355,7 @@ input[type=submit] {
 
 .search-field form {
   margin: 0;
-  width: 100px; 
+  width: 100px;
 }
 
 .view-container {

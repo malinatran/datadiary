@@ -1,58 +1,49 @@
-<div id="dashboard-container">
-
-<h4>Welcome, <%= @user.username %>!<br></h4>
-
-<div class="heading">The Dashboard</div>
-
-<h5>Check out the latest in your database.</h5>
-
-<div class="container">
-  <div class="database-container">
-
-    <!-- Finance container -->
-    <div class="database-subcontainer">
-      <%= image_tag("money.png", class: 'icon') %>
-      <div class="database">
-        <%= link_to 'Finance', user_finance_entries_path(@user.id) %>
-        <p class="subheading">Expenses</p>
-      </div>
+<div id='dashboard-container'>
+  <h4>Welcome, <%= @user.username %>!<br></h4>
+  <div class='heading'>The Dashboard</div>
+  <h5>Check out the latest in your database.</h5>
+  <div class='container'>
+    <div class='database-container'>
+      <%= link_to user_finance_entries_path(@user.id) do %>
+        <div class='database-subcontainer'>
+          <%= image_tag('money.png', class: 'icon') %>
+          <div class='database'>
+            <p class='superheading'>Finance</p>
+            <p class='subheading'>Expenses</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to user_health_entries_path(@user.id) do %>
+        <div class='database-subcontainer'>
+          <%= image_tag('heartbeat.png', class: 'icon') %>
+          <div class='database'>
+            <p class='superheading'>Health</p>
+            <p class='subheading'>Diet & Appointments</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to user_fitness_entries_path(@user.id) do %>
+        <div class='database-subcontainer'>
+          <%= image_tag('dumbbell.png', class: 'icon') %>
+          <div class='database'>
+            <p class='superheading'>Fitness</p>
+            <p class='subheading'>Exercise & Workouts</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to user_menstruation_entries_path(@user.id) do %>
+        <div class='database-subcontainer'>
+          <%= image_tag('blood.png', class: 'icon') %>
+          <div class='database'>
+            <p class='superheading'>Menstruation</p>
+            <p class='subheading'>Monthly Flow</p>
+          </div>
+        </div>
+      <% end %>
     </div>
-
-    <!-- Health container  -->
-    <div class="database-subcontainer">
-      <%= image_tag("heartbeat.png", class: 'icon') %>
-      <div class="database">
-        <%= link_to 'Health', user_health_entries_path(@user.id) %>
-        <p class="subheading">Diet & Appointments</p>
-      </div>
-    </div>
-
-    <!-- Fitness container  -->
-    <div class="database-subcontainer">
-      <%= image_tag("dumbbell.png", class: 'icon') %>
-      <div class="database">
-        <%= link_to 'Fitness',
-        user_fitness_entries_path(@user.id) %>
-        <p class="subheading">Exercise & Workouts</p>
-      </div>
-    </div>
-
-    <!-- Period container -->
-    <div class="database-subcontainer">
-      <%= image_tag("blood.png", class: 'icon') %>
-      <div class="database">
-        <%= link_to 'Period',
-        user_menstruation_entries_path(@user.id) %>
-        <p class="subheading">Monthly Flow</p>
-      </div>
-    </div>
-
   </div>
-</div>
-
-<div class="link-container">
-  <div class="link"><%= link_to 'Edit Account', settings_path %></div>
-  <div class="link"><%= link_to 'Logout', logout_path, method: 'delete' %></div>
-</div>
-
+  <div class='link-container'>
+    <div class='link'><%= link_to 'Edit Account', settings_path %></div>
+    <div class='link'><%= link_to 'Logout', logout_path, method: 'delete' %></div>
+  </div>
 </div>
